@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+    <script>
+        // Your Firebase configuration
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_PROJECT_ID.appspot.com",
+            messagingSenderId: "YOUR_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <img src="amazon-logo.png" alt="Amazon Logo" class="logo">
+        <form class="login-form" id="loginForm">
+            <h2>Sign-In</h2>
+            <label for="email">Email or mobile phone number</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Sign-In</button>
+        </form>
+        <div class="help-links">
+            <a href="#">Forgot your password?</a>
+            <a href="#">Other issues with Sign-In</a>
+        </div>
+        <div class="new-account">
+            <h3>New to Amazon?</h3>
+            <a href="#" class="create-account-button">Create your Amazon account</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
